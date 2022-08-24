@@ -1,0 +1,31 @@
+8/20/2022 Update:
+
+I determined that I can't use a shell script to trigger and run the program based on time of day. However the though occured to me that I could have th program run on this computer daily (or I could set up another perisistent Ubuntu computer to run the script) which would trigger via "at" daemon to run at a particular time per day. The script that would run would be time bound to buy if conditions were met with a subsequent trailing stop. It would then not buy again until the next trading day (as within the script there is a trigger for "is_open").
+
+08/19/2020 Updates:
+
+Today I added the an api call that wil tell the current positions of udow and sdow held. This will be necessary as the program will only purchase if an equity is not currently held.
+
+	To do: 
+		-find if stop limit sells can be placed via API, see if 			 trailing limit orders or trailing stops can be placed. 
+	
+		-set an initial "if" condition to check the time, such that
+		 the time must be within trading hours.
+		 	https://stackoverflow.com/questions/18945669/how-to-run-a-script-at-a-certain-time-on-l	inux
+		 
+		-
+		
+	
+
+Prior notes:
+
+I need a few seperate files to run this program. I think perhaps three files would suffice. One would be a config file with my username and password at least. The second would be the logic of the program, the third would be the log file (where information would be stored).
+
+#import libraries
+
+#login
+
+I'll need to run a shell script to run a process as a deamon which will automatically start the program if it is during trading hours ideally whether my computer is on or not (i.e. even run if it is hybernating or perhaps run it on a remote machine?)
+https://stackoverflow.com/questions/19233529/run-bash-script-as-daemon
+
+https://www.youtube.com/watch?v=-ARI4Cz-awo&feature=youtu.be
