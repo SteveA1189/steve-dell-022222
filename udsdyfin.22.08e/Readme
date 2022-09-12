@@ -1,3 +1,8 @@
+9/12/2022 Update:
+In place of the shell script a cron job:
+     5 6 * * 1-5 /home/steve/Documents/udsdyfin.22.08e/udsdyfin.22.08e.sh
+was set up. The cronjob points to the shell script which will be updated to just run the program.
+
 8/20/2022 Update:
 
 I determined that I can't use a shell script to trigger and run the program based on time of day. However the though occured to me that I could have th program run on this computer daily (or I could set up another perisistent Ubuntu computer to run the script) which would trigger via "at" daemon to run at a particular time per day. The script that would run would be time bound to buy if conditions were met with a subsequent trailing stop. It would then not buy again until the next trading day (as within the script there is a trigger for "is_open").
