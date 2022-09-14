@@ -1,10 +1,6 @@
-#! /bin/bash
+#! /bin/sh
 
-30 1 * * 5 /home/steve/Documents/udsdyfin.22.08e/udsdyfin.22.08e.sh
+cd /home/steve/Documents/udsdyfin.22.08e/
+python3 udsdyfin.22.08l.py
 
-date=$(date)
-
-if [ 1 = 1 ]
-
-echo $date
 
